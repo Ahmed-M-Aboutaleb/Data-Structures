@@ -53,6 +53,7 @@ void erase(DoublyLinkedList *list, int pos) {
     travNode->next = temp->next;
     temp->next->prv = travNode;
     free(temp);
+    list->size--;
 }
 
 int isEmpty(DoublyLinkedList *list) {

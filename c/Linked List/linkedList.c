@@ -46,6 +46,7 @@ void clear(List *list) {
         list->head = temp->next;
         free(temp);
     }
+    list->size = 0;
 }
 
 void insert(List *list, int pos, Type data) {
@@ -92,4 +93,5 @@ void erase(List *list, int pos) {
         tempTrav->next = temp->next;
         free(temp);
     }
+    list->size--;
 }
