@@ -6,8 +6,7 @@ int main()
 {
     DSList list;
     createDSL(&list);
-    DSLType firstData = {10, 'A'}, secondData = {30, 'C'}, thirdData = {20, 'B'}
-    , fourthData = {50, 'E'}, fifthData = {40, 'D'}, sixthData = {5, '#'};
+    DSLType firstData = {10, 'A'}, secondData = {30, 'C'}, thirdData = {20, 'B'}, fourthData = {50, 'E'}, fifthData = {40, 'D'}, sixthData = {5, '#'};
     insertDSL(&list, firstData);
     insertDSL(&list, secondData);
     insertDSL(&list, thirdData);

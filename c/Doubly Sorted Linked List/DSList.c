@@ -27,7 +27,8 @@ void insertDSL(DSList *list, DSLType data)
     {
         travNode = travNode->next;
     }
-    if(travNode->data.key < data.key && travNode->next == NULL) {
+    if (travNode->data.key < data.key && travNode->next == NULL)
+    {
         newNode->next = NULL;
         newNode->prv = travNode;
         travNode->next = newNode;
@@ -47,7 +48,8 @@ void eraseDSL(DSList *list, int key)
     DSLNode *travNode = list->head;
     while (travNode)
     {
-        if(travNode->data.key == key) {
+        if (travNode->data.key == key)
+        {
             DSLNode *tempNode = travNode;
             tempNode->prv->next = tempNode->next;
             tempNode->next->prv = travNode->prv;
@@ -56,7 +58,6 @@ void eraseDSL(DSList *list, int key)
         }
         travNode = travNode->next;
     }
-    
 }
 
 void printDSL(DSList *list)
