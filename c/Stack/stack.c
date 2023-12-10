@@ -1,44 +1,39 @@
 #include <stdio.h>
 #include "stack.h"
 
-void init(Stack *stack) {
+void createStack(Stack *stack)
+{
     stack->top = -1;
 }
 
-int isEmpty(Stack stack) {
-    return (stack.top+1 == 0);
+int isStackEmpty(Stack *stack)
+{
+    return (stack->top + 1 == 0);
 }
 
-int isFull(Stack stack) {
-    return (stack.top+1 == MAX_SIZE);
+int isStackFull(Stack *stack)
+{
+    return (stack->top + 1 == MAX_SIZE);
 }
 
-void push(Stack *stack, Type item) {
-    if(isFull(*stack)) {
-        printf("Sorry the stack is full!");
-        return;
-    }
+void push(Stack *stack, Type item)
+{
     stack->items[++stack->top] = item;
 }
 
-Type pop(Stack *stack) {
-    if(isEmpty(*stack)) {
-        printf("Sorry the stack is empty!");
-        return NULL;
-    }
+Type pop(Stack *stack)
+{
     Type item;
     item = stack->items[--stack->top];
     return item;
 }
 
-Type top(Stack stack) {
-    if(isEmpty(stack)) {
-        printf("Sorry the stack is empty!");
-        return NULL;
-    }
-    return stack.items[stack.top];
+Type top(Stack *stack)
+{
+    return stack->items[stack->top];
 }
 
-int size(Stack stack) {
-    return stack.top +1;
+int stackSize(Stack *stack)
+{
+    return stack->top + 1;
 }

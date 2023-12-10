@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "LinkedQueue.h"
 
-int main() {
+int main()
+{
     LinkedQueue myQueue;
-    initQueue(&myQueue);
-    enqueue(&myQueue, 1);
-    enqueue(&myQueue, 2);
-    enqueue(&myQueue, 3);
-    printf("My Front is %d \n", front(myQueue));
-    dequeue(&myQueue);
-    printf("My Front is %d \n", front(myQueue));
+    createLQ(&myQueue);
+    enqueueLQ(&myQueue, 1);
+    enqueueLQ(&myQueue, 2);
+    enqueueLQ(&myQueue, 3);
+    printf("My Front is %d \n", frontLQ(&myQueue));
+    dequeueLQ(&myQueue);
+    printf("My Front is %d \n", frontLQ(&myQueue));
     return 0;
 }

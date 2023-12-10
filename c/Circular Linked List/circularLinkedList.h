@@ -2,19 +2,22 @@
 #define CIRCULARLINKEDLIST_H_INCLUDED
 
 typedef int Type;
-typedef struct node {
+typedef struct node
+{
     Type data;
     struct node *next;
 } Node;
-typedef struct list {
-    Node* head;
+typedef struct list
+{
+    Node *head;
     int size;
 } List;
 
-void createList(List* list);
-int size(List* list);
-void print(List* list);
-void insert(List *list, int pos, Type data);
-void erase(List *list, int pos);
+void createCL(List *list);
+int isEmptyCL(List *list);
+void insertCL(List *list, int pos, Type data);
+void eraseCL(List *list, int pos);
+void printCL(List *list);
+int sizeCL(List *list);
 
 #endif // CIRCULARLINKEDLIST_H_INCLUDED

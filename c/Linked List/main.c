@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include "linkedList.h"
 
-int main() {
+int main()
+{
     List myList;
-    init(&myList);
-    insert(&myList, 0, 1);
-    print(myList);
-    insert(&myList, 1, 2);
-    print(myList);
-    insert(&myList, 0, 3);
-    print(myList);
-    erase(&myList, 0);
-    print(myList);
-    erase(&myList, 1);
-    print(myList);
-    clear(&myList);
-    print(myList);
+    createList(&myList);
+    insertList(&myList, 0, 1);
+    printList(&myList);
+    insertList(&myList, 1, 2);
+    printList(&myList);
+    insertList(&myList, 0, 3);
+    printList(&myList);
+    eraseList(&myList, 0);
+    printList(&myList);
+    eraseList(&myList, 1);
+    printList(&myList);
+    clearList(&myList);
+    printList(&myList);
 }

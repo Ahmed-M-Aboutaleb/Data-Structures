@@ -1,21 +1,31 @@
 #include "linkedQueue.h"
 
-void initQueue(LinkedQueue *queue) {
-    init(queue);
+void createLQ(LinkedQueue *queue)
+{
+    createList(queue);
 }
 
-int isEmptyQueue(LinkedQueue queue) {
-    return isEmpty(queue);
+int isEmptyLQ(LinkedQueue *queue)
+{
+    return isListEmpty(queue);
 }
 
-void enqueue(LinkedQueue *queue, Type data) {
-    insert(queue, queue->size, data);
+void enqueueLQ(LinkedQueue *queue, Type data)
+{
+    insertList(queue, queue->size, data);
 }
 
-void dequeue(LinkedQueue *queue) {
-    erase(queue, 0);
+void dequeueLQ(LinkedQueue *queue)
+{
+    eraseList(queue, 0);
 }
 
-Type front(LinkedQueue queue) {
-    return queue.head->data;
+Type frontLQ(LinkedQueue *queue)
+{
+    return queue->head->data;
+}
+
+int sizeLQ(LinkedQueue *queue)
+{
+    return sizeList(queue);
 }

@@ -1,21 +1,31 @@
 #include "linkedStack.h"
 
-void initStack(LinkedStack *stack) {
-    init(stack);
+void createLS(LinkedStack *stack)
+{
+    createList(stack);
 }
 
-int isEmptyStack(LinkedStack stack) {
-    return isEmpty(stack);
+int isEmptyLS(LinkedStack *stack)
+{
+    return isListEmpty(stack);
 }
 
-void push(LinkedStack *stack, Type data) {
-    insert(stack, 0, data);
+void pushLS(LinkedStack *stack, Type data)
+{
+    insertList(stack, 0, data);
 }
 
-void pop(LinkedStack *stack) {
-    erase(stack, 0);
+void popLS(LinkedStack *stack)
+{
+    eraseList(stack, 0);
 }
 
-Type top(LinkedStack stack) {
-    return stack.head->data;
+Type topLS(LinkedStack *stack)
+{
+    return stack->head->data;
+}
+
+int sizeLS(LinkedStack *stack)
+{
+    return sizeList(stack);
 }

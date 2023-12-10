@@ -3,23 +3,24 @@
 
 typedef int Type;
 
-typedef struct node {
+typedef struct node
+{
     Type data;
     struct node *next;
 } Node;
 
-typedef struct list {
+typedef struct list
+{
     Node *head;
     int size;
 } List;
 
-void init(List *list);
-int isEmpty(List list);
-int size(List list);
-void print(List list);
-void clear(List *list);
-void insert(List *list, int pos, Type data);
-void erase(List *list, int pos);
-
+void createList(List *list);
+int isListEmpty(List *list);
+void insertList(List *list, int pos, Type data);
+void eraseList(List *list, int pos);
+void printList(List *list);
+int sizeList(List *list);
+void clearList(List *list);
 
 #endif // LINKED_LIST_H_INCLUDED

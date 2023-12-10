@@ -5,16 +5,16 @@
 int main()
 {
     DoublyLinkedList list;
-    createList(&list);
-    insert(&list, 0, 1);
-    insert(&list, 0, 2);
-    insert(&list, 0, 3);
-    print(&list);
-    insert(&list, 1, 4);
+    createDL(&list);
+    insertDL(&list, 0, 1);
+    insertDL(&list, 0, 2);
+    insertDL(&list, 0, 3);
+    printDL(&list);
+    insertDL(&list, 1, 4);
     printf("\n");
-    print(&list);
+    printDL(&list);
     printf("\n");
-    erase(&list, 0);
-    print(&list);
+    eraseDL(&list, 0);
+    printDL(&list);
     return 0;
 }

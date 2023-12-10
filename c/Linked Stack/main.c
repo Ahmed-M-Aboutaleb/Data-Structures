@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "linkedStack.h"
 
-int main() {
+int main()
+{
     LinkedStack myStack;
-    initStack(&myStack);
-    push(&myStack, 1);
-    push(&myStack, 2);
-    push(&myStack, 3);
-    printf("My Top is %d \n", top(myStack));
-    pop(&myStack);
-    printf("My Top is %d \n", top(myStack));
+    createLS(&myStack);
+    pushLS(&myStack, 1);
+    pushLS(&myStack, 2);
+    pushLS(&myStack, 3);
+    printf("My Top is %d \n", topLS(&myStack));
+    popLS(&myStack);
+    printf("My Top is %d \n", topLS(&myStack));
     return 0;
 }

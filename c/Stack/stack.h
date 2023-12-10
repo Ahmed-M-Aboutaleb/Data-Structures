@@ -5,17 +5,18 @@
 
 typedef int Type;
 
-typedef struct stack {
+typedef struct stack
+{
     Type items[MAX_SIZE];
     int top;
 } Stack;
 
-void init(Stack *stack);
-int isEmpty(Stack stack);
-int isFull(Stack stack);
+void createStack(Stack *stack);
+int isStackEmpty(Stack *stack);
+int isStackFull(Stack *stack);
 void push(Stack *stack, Type item);
 Type pop(Stack *stack);
-Type top(Stack stack);
-int size(Stack stack);
+Type top(Stack *stack);
+int stackSize(Stack *stack);
 
 #endif // STACK_H_INCLUDED
