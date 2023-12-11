@@ -1,11 +1,11 @@
 #ifndef DOUBLYLINKEDLIST_H_INCLUDED
 #define DOUBLYLINKEDLIST_H_INCLUDED
 
-typedef int Type;
+typedef int DLType;
 
 typedef struct node
 {
-    Type data;
+    DLType data;
     struct node *next;
     struct node *prv;
 } Node;
@@ -18,7 +18,7 @@ typedef struct list
 
 void createDL(DoublyLinkedList *list);
 int isEmptyDL(DoublyLinkedList *list);
-void insertDL(DoublyLinkedList *list, int pos, Type data);
+void insertDL(DoublyLinkedList *list, int pos, DLType data);
 void eraseDL(DoublyLinkedList *list, int pos);
 void printDL(DoublyLinkedList *list);
 int sizeDL(DoublyLinkedList *list);

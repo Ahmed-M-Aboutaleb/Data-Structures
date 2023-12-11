@@ -17,6 +17,7 @@ void insertCL(List *list, int pos, Type data)
 {
     Node *newNode = (Node *)malloc(sizeof(Node));
     newNode->data = data;
+    list->size++;
     if (pos == 0)
     {
         newNode->next = list->head;
@@ -39,7 +40,6 @@ void insertCL(List *list, int pos, Type data)
         newNode->next = tempNode->next;
         tempNode->next = newNode;
     }
-    list->size++;
 }
 
 void eraseCL(List *list, int pos)

@@ -7,9 +7,9 @@ typedef List LinkedQueue;
 
 void createLQ(LinkedQueue *queue);
 int isEmptyLQ(LinkedQueue *queue);
-void enqueueLQ(LinkedQueue *queue, Type data);
+void enqueueLQ(LinkedQueue *queue, ListType data);
 void dequeueLQ(LinkedQueue *queue);
-Type frontLQ(LinkedQueue *queue);
+ListType frontLQ(LinkedQueue *queue);
 int sizeLQ(LinkedQueue *queue);
 
 #endif // LINKED_STACK_H_INCLUDED

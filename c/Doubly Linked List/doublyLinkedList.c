@@ -13,7 +13,7 @@ int isEmptyDL(DoublyLinkedList *list)
     return (list->size == 0);
 }
 
-void insertDL(DoublyLinkedList *list, int pos, Type data)
+void insertDL(DoublyLinkedList *list, int pos, DLType data)
 {
     Node *newNode = (Node *)malloc(sizeof(Node));
     list->size++;
@@ -43,6 +43,7 @@ void eraseDL(DoublyLinkedList *list, int pos)
         list->head = travNode->next;
         list->head->prv = NULL;
         free(travNode);
+        list->size--;
         return;
     }
     for (int i = 0; i < pos - 1; i++)

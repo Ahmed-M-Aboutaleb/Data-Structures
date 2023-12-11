@@ -13,7 +13,7 @@ int isListEmpty(List *list)
     return (list->size == 0);
 }
 
-void insertList(List *list, int pos, Type data)
+void insertList(List *list, int pos, ListType data)
 {
     Node *newNode = (Node *)malloc(sizeof(Node));
     newNode->data = data;

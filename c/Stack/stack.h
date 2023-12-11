@@ -3,20 +3,20 @@
 
 #define MAX_SIZE 100
 
-typedef int Type;
+typedef int StackType;
 
 typedef struct stack
 {
-    Type items[MAX_SIZE];
+    StackType items[MAX_SIZE];
     int top;
 } Stack;
 
 void createStack(Stack *stack);
 int isStackEmpty(Stack *stack);
 int isStackFull(Stack *stack);
-void push(Stack *stack, Type item);
-Type pop(Stack *stack);
-Type top(Stack *stack);
+void push(Stack *stack, StackType item);
+StackType pop(Stack *stack);
+StackType top(Stack *stack);
 int stackSize(Stack *stack);
 
 #endif // STACK_H_INCLUDED

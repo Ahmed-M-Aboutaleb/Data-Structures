@@ -1,11 +1,11 @@
 #ifndef LINKED_LIST_H_INCLUDED
 #define LINKED_LIST_H_INCLUDED
 
-typedef int Type;
+typedef int ListType;
 
 typedef struct node
 {
-    Type data;
+    ListType data;
     struct node *next;
 } Node;
 
@@ -17,7 +17,7 @@ typedef struct list
 
 void createList(List *list);
 int isListEmpty(List *list);
-void insertList(List *list, int pos, Type data);
+void insertList(List *list, int pos, ListType data);
 void eraseList(List *list, int pos);
 void printList(List *list);
 int sizeList(List *list);

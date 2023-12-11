@@ -15,6 +15,7 @@ void insertDSL(DSList *list, DSLType data)
 {
     DSLNode *newNode = (DSLNode *)malloc(sizeof(DSLNode));
     newNode->data = data;
+    list->size++;
     DSLNode *travNode = list->head;
     if (list->head == NULL)
     {
@@ -50,6 +51,7 @@ void eraseDSL(DSList *list, int key)
     {
         if (travNode->data.key == key)
         {
+            list->size--;
             DSLNode *tempNode = travNode;
             tempNode->prv->next = tempNode->next;
             tempNode->next->prv = travNode->prv;

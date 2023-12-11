@@ -10,7 +10,7 @@ int isEmptyLQ(LinkedQueue *queue)
     return isListEmpty(queue);
 }
 
-void enqueueLQ(LinkedQueue *queue, Type data)
+void enqueueLQ(LinkedQueue *queue, ListType data)
 {
     insertList(queue, queue->size, data);
 }
@@ -20,7 +20,7 @@ void dequeueLQ(LinkedQueue *queue)
     eraseList(queue, 0);
 }
 
-Type frontLQ(LinkedQueue *queue)
+ListType frontLQ(LinkedQueue *queue)
 {
     return queue->head->data;
 }

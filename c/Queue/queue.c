@@ -18,23 +18,23 @@ int isQueueFull(Queue *queue)
     return (queue->size == MAX_SIZE);
 }
 
-void enqueue(Queue *queue, Type item)
+void enqueue(Queue *queue, QueueType item)
 {
     queue->back = (queue->back + 1) % MAX_SIZE;
     queue->items[queue->back] = item;
     queue->size++;
 }
 
-Type dequeue(Queue *queue)
+QueueType dequeue(Queue *queue)
 {
-    Type item;
+    QueueType item;
     queue->size--;
     item = queue->items[queue->front];
     queue->front = (queue->front + 1) % MAX_SIZE;
     return item;
 }
 
-Type front(Queue *queue)
+QueueType front(Queue *queue)
 {
     return queue->items[queue->front];
 }

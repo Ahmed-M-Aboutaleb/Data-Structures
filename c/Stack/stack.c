@@ -16,19 +16,19 @@ int isStackFull(Stack *stack)
     return (stack->top + 1 == MAX_SIZE);
 }
 
-void push(Stack *stack, Type item)
+void push(Stack *stack, StackType item)
 {
     stack->items[++stack->top] = item;
 }
 
-Type pop(Stack *stack)
+StackType pop(Stack *stack)
 {
-    Type item;
-    item = stack->items[--stack->top];
+    StackType item;
+    item = stack->items[stack->top--];
     return item;
 }
 
-Type top(Stack *stack)
+StackType top(Stack *stack)
 {
     return stack->items[stack->top];
 }
