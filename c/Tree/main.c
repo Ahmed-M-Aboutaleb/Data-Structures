@@ -15,7 +15,6 @@ int main()
     inOrderTravRec(myT, &printNode);
     printf("\n");
 
-
     printf("preOrderTravRec: ");
     preOrderTravRec(myT, &printNode);
     printf("\n");
