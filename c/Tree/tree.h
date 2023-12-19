@@ -11,7 +11,7 @@ typedef struct node
 typedef TreeNode *Tree;
 
 void createTree(Tree *tree);
-int isEmpty(Tree *tree);
+int isTreeEmpty(Tree *tree);
 void fillTree(Tree *tree);
 void inOrderTrav(Tree tree, void (*pvisit)(TreeType *));
 void inOrderTravRec(Tree tree, void (*pvisit)(TreeType *));

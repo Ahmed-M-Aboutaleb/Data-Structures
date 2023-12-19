@@ -8,7 +8,7 @@ void createTree(Tree *tree)
     *tree = NULL;
 }
 
-int isEmpty(Tree *tree)
+int isTreeEmpty(Tree *tree)
 {
     return (!tree);
 }

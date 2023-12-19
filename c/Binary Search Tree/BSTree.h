@@ -12,8 +12,8 @@ typedef BSTreeNode *BSTree;
 
 void createBSTree(BSTree *tree);
 int isBSTreeEmpty(BSTree *tree);
-void insertBST(BSTree *tree, BSTreeType);
-int deleteBST(BSTree *tree, BSTreeType element);
+void insertBST(BSTree *tree, BSTreeType item);
+int deleteBST(BSTree *tree, BSTreeType item);
 void inOrderTravBST(BSTree tree, void (*pvisit)(BSTreeType *));
 void preOrderTravBST(BSTree tree, void (*pvisit)(BSTreeType *));
 void postOrderTravBST(BSTree tree, void (*pvisit)(BSTreeType *));

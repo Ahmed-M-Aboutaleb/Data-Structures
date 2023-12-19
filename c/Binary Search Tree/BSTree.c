@@ -13,9 +13,9 @@ int isBSTreeEmpty(BSTree *tree)
     return (!tree);
 }
 
-void insertBST(BSTree *tree, BSTreeType data) {
+void insertBST(BSTree *tree, BSTreeType item) {
     BSTreeNode *newNode = (BSTreeNode*) malloc(sizeof(BSTreeNode));
-    newNode->data = data;
+    newNode->data = item;
     newNode->right = NULL;
     newNode->left = NULL;
     if(!(*tree)) {
@@ -26,12 +26,12 @@ void insertBST(BSTree *tree, BSTreeType data) {
     while (curr)
     {
         prv = curr;
-        if(data > curr->data)
+        if(item > curr->data)
             curr = curr->right;
         else
             curr = curr->left;
     }
-    (data > prv->data) ? (prv->right = newNode) : (prv->left = newNode);
+    (item > prv->data) ? (prv->right = newNode) : (prv->left = newNode);
 }
 
 void deleteBSTNode(BSTree *node) {
@@ -58,13 +58,13 @@ void deleteBSTNode(BSTree *node) {
     free(travNode);
 }
 
-int deleteBST(BSTree *tree, BSTreeType element) {
+int deleteBST(BSTree *tree, BSTreeType item) {
     int found = 0;
     BSTreeNode *travNode = *tree, *prvNode = NULL;
-    while (travNode && !(found = (element == travNode->data)))
+    while (travNode && !(found = (item == travNode->data)))
     {
         prvNode = travNode;
-        if(element < travNode->data)
+        if(item < travNode->data)
             travNode = travNode->left;
         else
             travNode = travNode->right;
@@ -73,7 +73,7 @@ int deleteBST(BSTree *tree, BSTreeType element) {
         if (!prvNode)
         {
             deleteBSTNode(tree);
-        } else if(element< prvNode->data) {
+        } else if(item< prvNode->data) {
             deleteBSTNode(&prvNode->left);
         } else {
             deleteBSTNode(&prvNode->right);
