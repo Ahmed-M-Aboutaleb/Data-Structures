@@ -4,7 +4,7 @@
 
 #define MAX_SIZE 100
 
-typedef TreeNode* StackType;
+typedef TreeNode *StackType;
 
 typedef struct stack
 {

@@ -7,18 +7,19 @@ void createBSTree(BSTree *tree)
     *tree = NULL;
 }
 
-
 int isBSTreeEmpty(BSTree *tree)
 {
     return (!tree);
 }
 
-void insertBST(BSTree *tree, BSTreeType item) {
-    BSTreeNode *newNode = (BSTreeNode*) malloc(sizeof(BSTreeNode));
+void insertBST(BSTree *tree, BSTreeType item)
+{
+    BSTreeNode *newNode = (BSTreeNode *)malloc(sizeof(BSTreeNode));
     newNode->data = item;
     newNode->right = NULL;
     newNode->left = NULL;
-    if(!(*tree)) {
+    if (!(*tree))
+    {
         *tree = newNode;
         return;
     }
@@ -26,7 +27,7 @@ void insertBST(BSTree *tree, BSTreeType item) {
     while (curr)
     {
         prv = curr;
-        if(item > curr->data)
+        if (item > curr->data)
             curr = curr->right;
         else
             curr = curr->left;
@@ -34,13 +35,19 @@ void insertBST(BSTree *tree, BSTreeType item) {
     (item > prv->data) ? (prv->right = newNode) : (prv->left = newNode);
 }
 
-void deleteBSTNode(BSTree *node) {
+void deleteBSTNode(BSTree *node)
+{
     BSTreeNode *travNode = *node;
-    if(!(travNode)->left) {
+    if (!(travNode)->left)
+    {
         *node = travNode->right;
-    } else if(!(travNode)->right) {
+    }
+    else if (!(travNode)->right)
+    {
         *node = travNode->left;
-    } else {
+    }
+    else
+    {
         travNode = travNode->left;
         BSTreeNode *prvNode = NULL;
         while (travNode->right)
@@ -49,33 +56,42 @@ void deleteBSTNode(BSTree *node) {
             travNode = travNode->right;
         }
         (*node)->data = travNode->data;
-        if(prvNode) {
+        if (prvNode)
+        {
             prvNode->right = travNode->left;
-        } else {
+        }
+        else
+        {
             (*node)->left = travNode->left;
         }
     }
     free(travNode);
 }
 
-int deleteBST(BSTree *tree, BSTreeType item) {
+int deleteBST(BSTree *tree, BSTreeType item)
+{
     int found = 0;
     BSTreeNode *travNode = *tree, *prvNode = NULL;
     while (travNode && !(found = (item == travNode->data)))
     {
         prvNode = travNode;
-        if(item < travNode->data)
+        if (item < travNode->data)
             travNode = travNode->left;
         else
             travNode = travNode->right;
     }
-    if(found) {
+    if (found)
+    {
         if (!prvNode)
         {
             deleteBSTNode(tree);
-        } else if(item< prvNode->data) {
+        }
+        else if (item < prvNode->data)
+        {
             deleteBSTNode(&prvNode->left);
-        } else {
+        }
+        else
+        {
             deleteBSTNode(&prvNode->right);
         }
         return found;

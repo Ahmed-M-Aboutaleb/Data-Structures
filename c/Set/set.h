@@ -7,8 +7,9 @@ typedef struct setNode
     setType data;
     struct setNode *next;
 } SetNode;
-typedef struct{
-    SetNode* head;
+typedef struct
+{
+    SetNode *head;
     int size;
 } Set;
 

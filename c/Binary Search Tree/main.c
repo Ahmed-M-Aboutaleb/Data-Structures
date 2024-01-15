@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "BSTree.h"
 
-int main() {
+int main()
+{
     BSTree tree;
     createBSTree(&tree);
     insertBST(&tree, 40);
