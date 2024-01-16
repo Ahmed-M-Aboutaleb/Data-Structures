@@ -1,10 +1,10 @@
 package Java.tests;
 
-import Java.Queue;
+import Java.LinkedQueue;
 
-public class QueueTest {
+public class LinkedQueueTest {
     public static void main(String[] args) {
-        Queue<Integer> myQueue = new Queue<>();
+        LinkedQueue<Integer> myQueue = new LinkedQueue<>();
         myQueue.enqueue(1);
         myQueue.enqueue(2);
         myQueue.enqueue(3);

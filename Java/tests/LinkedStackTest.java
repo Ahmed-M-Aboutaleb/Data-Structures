@@ -1,10 +1,10 @@
 package Java.tests;
 
-import Java.Stack;
+import Java.LinkedStack;
 
-public class StackTest {
+public class LinkedStackTest {
     public static void main (String[] args) {
-        Stack<Integer> myStack = new Stack<>();
+        LinkedStack<Integer> myStack = new LinkedStack<>();
         myStack.push(1);
         myStack.push(2);
         myStack.push(3);

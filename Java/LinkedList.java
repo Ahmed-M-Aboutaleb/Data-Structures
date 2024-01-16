@@ -13,6 +13,15 @@ public class LinkedList<Type> {
         return (this.size == 0);
     }
 
+    public Node<Type> getHead() {
+        return this.head;
+    }
+
+    public boolean setHead(Node<Type> head) {
+        this.head = head;
+        return true;
+    }
+
     public boolean insert(Type value) {
         Node<Type> newNode = new Node<>();
         newNode.setData(value);
