@@ -1,8 +1,8 @@
 package Java;
 
 public class LinkedList<Type> {
-    private Node<Type> head;
-    private int size;
+    protected Node<Type> head;
+    protected int size;
 
     public LinkedList() {
         this.head = null;
