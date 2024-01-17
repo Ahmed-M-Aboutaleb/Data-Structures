@@ -41,7 +41,7 @@ public class DoublyLinkedList<Type> extends LinkedList<Type> {
         }
         deletedNode = travNode.getRight();
         travNode.setRight(deletedNode.getRight());
-        if(deletedNode.getRight() != null)
+        if (deletedNode.getRight() != null)
             deletedNode.getRight().setLeft(travNode);
         deletedNode = null;
         this.size--;
